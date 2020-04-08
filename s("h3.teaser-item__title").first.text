@@ -1,0 +1,19 @@
+
+[1mFrom:[0m /mnt/c/Users/KHY/Desktop/Flatiron/chinesefood/lib/chinesefood/scraper.rb:13 Scraper.scrape_goodfood:
+
+     [1;34m3[0m: [32mdef[0m [1;36mself[0m.[1;34mscrape_goodfood[0m
+     [1;34m4[0m:     doc = [1;34;4mNokogiri[0m::HTML(open([31m[1;31m"[0m[31mhttps://www.bbcgoodfood.com/recipes/collection/chinese[1;31m"[0m[31m[0m))
+     [1;34m5[0m:     
+     [1;34m6[0m:     [1;34m# recipe = self.new[0m
+     [1;34m7[0m:     doc.css([31m[1;31m"[0m[31mnode.node-recipe.node-teaser-item.clearfix[1;31m"[0m[31m[0m).each [32mdo[0m |recipe|
+     [1;34m8[0m:         name = doc.css([31m[1;31m"[0m[31mh3.teaser-item__title[1;31m"[0m[31m[0m).first.text
+     [1;34m9[0m:         time = doc.css([31m[1;31m"[0m[31mli.teaser-item__info-item.teaser-item__info-item--total-time[1;31m"[0m[31m[0m).first.text
+    [1;34m10[0m:         difficulty = doc.css([31m[1;31m"[0m[31mli.teaser-item__info-item.teaser-item__info-item--skill-level[1;31m"[0m[31m[0m).first.text
+    [1;34m11[0m:         [1;34;4mRecipes[0m.new(name, time, difficulty)
+    [1;34m12[0m:     [32mend[0m
+ => [1;34m13[0m:     binding.pry
+    [1;34m14[0m:     
+    [1;34m15[0m: 
+    [1;34m16[0m: 
+    [1;34m17[0m: [32mend[0m
+

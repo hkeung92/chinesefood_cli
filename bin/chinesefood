@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require "./lib/chinesefood"
+# require "bundler/setup"
+# require "chinesefood"
+
+# Chinesefood::CLI.new.call
+CLI.new.call
