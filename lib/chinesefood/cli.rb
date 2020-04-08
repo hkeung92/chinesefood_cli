@@ -1,4 +1,3 @@
-# class Chinesefood::CLI
 require 'colorize'
 
 class CLI
@@ -14,25 +13,12 @@ class CLI
     end
     
     def list_food
-        # puts <<-DOC.gsub /^\s*/, ''
-        # 1. beef
-        # 2. chicken
-        # DOC
-        # @recipes = Chinesefood::Recipe.today
         Recipes.all.each.with_index(1) do |recipe, i|
             puts "#{i}. #{recipe.name}"
         end
-        # @recipes = Recipes.today
-        # @recipes.each.with_index(1) do |recipe, i|
-        #     puts "#{i}. #{recipe.name} - #{recipe.time} - #{recipe.difficulty}"
-        # end
     end
 
     def menu
-        # input = nil
-        # while input != "exit"
-        #     puts "Enter the number of food or type 'list' to see detail or type 'exit'"
-        #     input = gets.strip.downcase
         puts "Enter the number of food or type 'list' to see detail or type 'exit'"
         input = gets.chomp
             if input.to_i.between?(1, Recipes.all.count)
@@ -81,7 +67,4 @@ class CLI
     def goodbye
         puts "See you next time!"
     end
-
-
-
 end
