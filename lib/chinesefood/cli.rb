@@ -19,7 +19,7 @@ class CLI
     end
 
     def menu
-        puts "Enter the number of food or type 'list' to see detail or type 'exit'"
+        puts "Enter the number to choose a dish or type 'list' to see detail or type 'exit'"
         input = gets.chomp
             if input.to_i.between?(1, Recipes.all.count)
                 recipe = Recipes.all[input.to_i-1]
@@ -41,7 +41,8 @@ class CLI
                 list_food
                 menu
                 elsif another_recipe == "n"
-                puts "Hope you have learnt something here!"
+                puts "Hope you have learnt something today!"
+                goodbye
                 exit
                 else
                 "I didn't get that. Please try again!"

@@ -21,16 +21,16 @@ class Scraper
 
         recipe_ingredient = []
         doc.css("ul.ingredients-list__group").css("li.ingredients-list__item").each.with_index(1) do |x,i|
-            new_ingredient = "#{i}.".swap + " "  + x.attr("content")
+            new_ingredient = "#{i}.".underline + " "  + x.attr("content")
             recipe_ingredient << new_ingredient
-            recipe.ingredient = recipe_ingredient.join(' ')
+            recipe.ingredient = "\n" + recipe_ingredient.join("\n")
         end
 
         recipe_method = []
         doc.css("ol.method__list").css("li.method__item").each.with_index(1) do |m,i| 
-            new_method = "#{i}.".swap + " " + m.css("p").text
+            new_method = "#{i}.".underline + " " + m.css("p").text
             recipe_method << new_method
-            recipe.method = recipe_method.join(' ')
+            recipe.method = "\n" + recipe_method.join("\n")
         end
     end
 
